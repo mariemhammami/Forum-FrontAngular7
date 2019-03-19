@@ -1,0 +1,59 @@
+
+  <div class="menu-area navbar-fixed-top ">
+    <div class="container">
+      <div class="row">
+        <div class="mainmenu-wrapper">
+          <!-- Start Header Logo -->
+          <div class="col-xs-12 col-md-3">
+            <div class="header-logo">
+              <a [routerLink]="['/header']" routerLinkActive="router-link-active" ><img src="../../assets/images/logo.png" alt="logo"></a>
+            </div>
+          </div>
+          <!-- End Header Logo -->
+          <!-- Start Navigation -->
+          <div class="col-xs-12 col-md-9">
+            <div class="mainmenu">
+              <div class="navbar navbar-right">
+                <div class="navbar-header visible-xs">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+
+                  </button>
+                </div>
+                <div class="collapse navbar-collapse top-menu">
+                  <nav>
+
+
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="/header">Home<span>Get everything</span></a>
+                      </li>
+                      <li>
+                        <a >Questions
+                          <span>Ask Your Question</span></a>
+                        <ul class="dropdown">
+                          <li>
+                            <a [routerLink]="['/allquestion']" routerLinkActive="router-link-active" >
+                              <span><i class="fa fa-question-circle"></i></span>All
+                              Questions</a>
+                          </li>
+                          <li><a [routerLink]="['/askquestion']" routerLinkActive="router-link-active" ><span><i class="fa  fa-question-circle-o"></i></span>Ask
+                              Questions</a></li>
+                          <li><a href="answers.html"><span><i class="fa fa-reply-all"></i></span>Answers</a></li>
+                          </ul>
+                      </li>
+
+                      <li><a href="blog.html">Blog<span>All Blog Posts</span></a></li>
+                      <li><a href="contact.html">Contact<span>Let us contact</span></a></li>
+                      <li><a [routerLink]="['/login']" routerLinkActive="router-link-active" ><span ><i class="fa fa-sign-in"style="size: 15px"></i></span>Login</a></li>
+                      <li><a [routerLink]="['/registration']" routerLinkActive="router-link-active" ><span><i class="fa fa-registered"></i></span>Register</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Navigation -->
+        </div>
+      </div>
+    </div>
+  </div>

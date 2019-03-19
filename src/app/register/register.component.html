@@ -1,0 +1,40 @@
+<div class="page-banner-area">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="page-title">
+                  <h2>Register Page</h2>
+                  <span class="sub-title"><a href="#">Home</a> / Register page</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- End Pages Banner Area -->
+<!-- Start Login Form -->
+<div class="login-form-area themeix-ptb">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <div class="login-form">
+                  <form name="registerform" action="#" method="post">
+                      <label for="user_login">Username</label>
+                      <input type="text" [(ngModel)]="registerUserData['username']" name="username"  required>
+                      <label for="confirm_email">Password</label>
+                      <input type="password" [(ngModel)]="registerUserData['password']" name="password" required>
+                      <label for="confirm_email2">Password Again</label>
+                      <input type="password" [(ngModel)]="registerUserData['confirmpassword']" name="confirmpassword" >
+                      <input (click)="registerUser()" type="submit" name="wp-submit" id="wp-submit" class="themeix-btn hover-bg" value="Register" />
+                      <hr class="my-4">
+                      <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
+
+                    </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+

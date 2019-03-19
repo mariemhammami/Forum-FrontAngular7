@@ -1,0 +1,43 @@
+<div class="page-banner-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-title">
+          <h2>DWQA Ask Question</h2>
+          <span class="sub-title"><a href="#">Home </a> / DWQA Ask Question</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Pages Banner Area -->
+<!-- Start Questions Area -->
+<div class="question-area themeix-ptb">
+  <div class="container">
+    <div class="row">
+      <!-- Start Question -->
+      <div class="col-md-9">
+        <div class="questions-wrapper">
+          <div class="dwqa-container">
+            <form action="#" class="dwqa-content-edit-form">
+              <label for="question-title">Title</label>
+              <input  type="text" name="title"[(ngModel)]="titre"/>
+
+              <label for="question-content">Question Details</label>
+              <textarea name="content" id="question-content" cols="30" rows="10"[(ngModel)]="content"></textarea>
+
+              <label for="question-category">Category</label>
+              <select name="question-category" id="question-category" class="postform" [(ngModel)]="categorie">
+
+                <option *ngFor="let i of categories " value={{i.id}}>{{i.nom_categories}}</option>
+              </select>
+
+                  <input id="wp-submit" type="submit" value="Submit" name="wp-submit" class="themeix-btn hover-bg"
+                    (click)="send()">
+            </form>
+
+
+
+          </div>
+        </div>
+      </div>
