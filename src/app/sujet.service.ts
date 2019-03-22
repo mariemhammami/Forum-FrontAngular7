@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class SujetService {
   SujetUrl = 'http://127.0.0.1:8000/sujet/new';
-getsujet = 'http://127.0.0.1:8000/sujet';
+  getsujet = 'http://127.0.0.1:8000/sujet';
   constructor(private http: HttpClient, private router: Router) { }
   public NewSujet(titre, cont, idcat, iduser): any {
     const obj = {
@@ -25,6 +25,10 @@ getsujet = 'http://127.0.0.1:8000/sujet';
   public getAllquestion() {
     return this.http.get(this.getsujet);
 
+  }
+
+  public getQuestionFromID(id) {
+    return this.http.get(`${this.getsujet}/${id}`);
   }
 
 

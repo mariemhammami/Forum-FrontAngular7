@@ -26,7 +26,7 @@
                           <div class="dwqa-questions-list">
                               <div class="dwqa-question-item dwqa-sticky" *ngFor="let i of sujet ">
                                   <header class="dwqa-question-title">
-                                      <a [routerLink]="['/Answers']"+{{i.id}} routerLinkActive="router-link-active" >{{i.contenu_sujet}}</a>
+                                      <a [routerLink]="['/Answers',i.id]" routerLinkActive="router-link-active" >{{i.contenu_sujet}}</a>
                                   </header>
                                   <div class="dwqa-question-meta">
                                       <span class="dwqa-status dwqa-status-open" title="Open">Open</span>

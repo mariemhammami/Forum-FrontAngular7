@@ -3,7 +3,7 @@
       <div class="row">
           <div class="col-md-12">
               <div class="page-title">
-                  <h2>How to pin a sticky question to the top of the questions page?</h2>
+                  <h2>{{sujet.titre_sujet}}</h2>
                   <span class="sub-title"><a href="#">Home </a> / Answer</span>
               </div>
           </div>
@@ -23,7 +23,7 @@
                           <span class="dwqa-sep"> › </span>
                           <a href="#">Category : Questions</a>
                           <span class="dwqa-sep"> › </span>
-                          <span class="dwqa-current">Why can Admins no longer pin more than one post in the question page?</span>
+                          <span class="dwqa-current">{{sujet.titre_sujet}}</span>
                       </div>
                       <!-- Start Question Item -->
                       <div class="dwqa-question-item">
@@ -35,10 +35,9 @@
                           <div class="dwqa-question-meta">
                               <span>
                               <a href="#">
-                                 <img class="avatar avatar-48 photo" alt="Author" src="images/author2.png">
-                              Vernon Dahmer
+                              {{sujet.user.username}}
                               </a>
-                              asked 1 year ago
+                              asked  {{sujet.date|date}}
                               </span>
                               <span class="dwqa-question-actions"></span>
                           </div>

@@ -23,7 +23,7 @@ const routes: Routes = [
 { path: 'header', component: HeaderComponent},
 { path: 'allquestion', component: AllQuestionComponent},
 { path: 'askquestion', component: AckquestionComponent},
-{ path: 'Answers', component: AnswersComponent},
+{ path: 'Answers/:id', component: AnswersComponent},
 ];
 
 @NgModule({
