@@ -46,7 +46,8 @@ export class LoginService {
   getIDUSER() {
     const header = new HttpHeaders().append('Authorization', 'Bearer ' + localStorage.getItem('token'));
     return this.http.get(this.user, { headers: header });
-
-
   }
+
+
+
 }

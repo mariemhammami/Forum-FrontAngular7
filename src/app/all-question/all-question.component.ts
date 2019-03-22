@@ -20,6 +20,8 @@ export class AllQuestionComponent implements OnInit {
       this.sujet = data;
       console.log(this.sujet);
     });
+
+
   }
 
 }

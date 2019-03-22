@@ -26,12 +26,12 @@
                           <div class="dwqa-questions-list">
                               <div class="dwqa-question-item dwqa-sticky" *ngFor="let i of sujet ">
                                   <header class="dwqa-question-title">
-                                      <a href="#">{{i.contenu_sujet}}</a>
+                                      <a [routerLink]="['/Answers']"+{{i.id}} routerLinkActive="router-link-active" >{{i.contenu_sujet}}</a>
                                   </header>
                                   <div class="dwqa-question-meta">
                                       <span class="dwqa-status dwqa-status-open" title="Open">Open</span>
-                                      <span><a href="#">Kiki Ralp</a> answered 1 year ago</span>
-                                      <span class="dwqa-question-category"> • <a href="#" rel="tag">Technical</a></span>
+                                      <span><a href="#">{{i.user.username}}</a> answered {{i.date| date}} ago</span>
+                                      <span class="dwqa-question-category"> • <a href="#" rel="tag">{{i.categories.nom_categories}}</a></span>
                                   </div>
                                   <div class="dwqa-question-stats">
 

@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { AllQuestionComponent } from './all-question/all-question.component';
 import { AckquestionComponent } from './ackquestion/ackquestion.component';
+import { AnswersComponent } from './answers/answers.component';
 
 const routes: Routes = [
 { path: 'login', component: AuthentificationComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
 { path: 'header', component: HeaderComponent},
 { path: 'allquestion', component: AllQuestionComponent},
 { path: 'askquestion', component: AckquestionComponent},
+{ path: 'Answers', component: AnswersComponent},
 ];
 
 @NgModule({
