@@ -13,8 +13,8 @@ export class AnswersComponent implements OnInit {
   sujet;
   id;
   constructor(private route: ActivatedRoute, private router: Router,
-     private cate: CategoriesService, private suj: SujetService,
-     private auth: LoginService ) { }
+    private cate: CategoriesService, private suj: SujetService,
+    private auth: LoginService) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');

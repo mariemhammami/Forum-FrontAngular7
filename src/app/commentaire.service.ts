@@ -22,7 +22,7 @@ export class CommentaireService {
   }
 
   public getAllCommentaire() {
-    return this.http.get(this.getsujet);
+    //return this.http.get(this.getsujet);
 
   }
 

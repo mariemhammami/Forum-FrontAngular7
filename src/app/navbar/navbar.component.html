@@ -44,8 +44,10 @@
 
                       <li><a href="blog.html">Blog<span>All Blog Posts</span></a></li>
                       <li><a href="contact.html">Contact<span>Let us contact</span></a></li>
-                      <li><a [routerLink]="['/login']" routerLinkActive="router-link-active" ><span ><i class="fa fa-sign-in"style="size: 15px"></i></span>Login</a></li>
-                      <li><a [routerLink]="['/registration']" routerLinkActive="router-link-active" ><span><i class="fa fa-registered"></i></span>Register</a></li>
+                      <li><a  *ngIf="!auth.loggedIn()" [routerLink]="['/login']" routerLinkActive="router-link-active" ><span ><img src="../../assets/images/enter.png"   style="height:30px; width:35px;"></span>Login</a></li>
+                      <li><a  *ngIf="!auth.loggedIn()" [routerLink]="['/registration']" routerLinkActive="router-link-active" ><span><img src="../../assets/images/smartphone.png"   style="height:30px; width:37px; position: relative;"></span>Register</a></li>
+                      <li> <a  *ngIf="auth.loggedIn()"  (click)="auth.logoutUser()"><span ><img src="../../assets/images/exit.png"   style="height:30px; width:30px;"></span>Logaut</a></li>
+
                     </ul>
                   </nav>
                 </div>

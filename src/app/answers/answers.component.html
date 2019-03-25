@@ -21,7 +21,7 @@
                       <div class="dwqa-breadcrumbs">
                           <a href="#">Questions</a>
                           <span class="dwqa-sep"> › </span>
-                          <a href="#">Category : Questions</a>
+                          <a href="#">{{sujet.categories.forum.titre_forum}} : {{sujet.categories.nom_categories}}</a>
                           <span class="dwqa-sep"> › </span>
                           <span class="dwqa-current">{{sujet.titre_sujet}}</span>
                       </div>
@@ -42,87 +42,26 @@
                               <span class="dwqa-question-actions"></span>
                           </div>
                           <div class="dwqa-question-content">
-                              <p>I want DWQA used to be able to “pin” up to 3 posts at a time in the question page, allowing users to see any posts we deemed important with ease. I only able to pin one post at any given time. Can someone please explain why? I’d really like it.</p>
+                              <p>{{sujet.contenu_sujet}}</p>
                           </div>
                           <footer class="dwqa-question-footer">
                               <div class="dwqa-question-meta"></div>
                           </footer>
 
-                          <div class="dwqa-comments">
-                              <div class="dwqa-comments-list">
 
-                                  <div class="dwqa-comment">
-                                      <div class="dwqa-comment-meta">
-                                          <a href="#"><img alt="author" src="images/author2.png" />Shan Judd</a>
-                                          replied 1 year ago
-                                          <div class="dwqa-comment-actions">
-                                          </div>
-                                      </div>
-                                      <p>Up to 3 posts? I love this thought.</p>
-                                  </div>
-                                  <!-- #comment-## -->
-
-                                  <div class="dwqa-comment">
-                                      <div class="dwqa-comment-meta">
-                                          <a href="#"><img alt="author" src="images/author2.png" />Shan Judd</a>
-                                          replied 1 year ago
-                                          <div class="dwqa-comment-actions">
-                                          </div>
-                                      </div>
-                                      <p>If you are comfortable with code, this function can do it easily.</p>
-                                  </div>
-                                  <!-- #comment-## -->
-
-                                  <div class="dwqa-comment">
-                                      <div class="dwqa-comment-meta">
-                                          <a href="#"><img alt="author" src="images/author2.png" />Vernon Dahmer</a>
-                                          replied 1 year ago
-                                          <div class="dwqa-comment-actions">
-                                          </div>
-                                      </div>
-                                      <p>Oh well .. it was worth a try I suppose .</p>
-                                  </div>
-                                  <!-- #comment-## -->
-
-                                  <div class="dwqa-comment">
-                                      <div class="dwqa-comment-meta">
-                                          <a href="#"><img alt='' src="images/author2.png" />Shan Judd</a>
-                                          replied 1 year ago
-                                          <div class="dwqa-comment-actions">
-                                          </div>
-                                      </div>
-                                      <p>Agree to you. One post is not enough and with lot of members, Important discussions are lost. Need at least two if not three options to pin important posts.</p>
-                                  </div>
-                                  <!-- #comment-## -->
-                              </div>
-                          </div>
-                      </div>
                       <!-- End Questions Ityem -->
                       <!-- Start Answer item -->
                       <div class="dwqa-answers">
-                          <div class="dwqa-answers-title"><span>2 Answers</span></div>
+                          <div class="dwqa-answers-title"><span>{{sujet.commentaires.length}} Answers</span></div>
                           <div class="dwqa-answers-list">
                               <div class="dwqa-answer-item dwqa-best-answer" id="answer-63">
-                                  <div class="dwqa-answer-vote">
-                                      <span class="dwqa-vote-count">7</span>
-                                      <a class="dwqa-vote dwqa-vote-up" href="#">Vote Up</a>
-                                      <a class="dwqa-vote dwqa-vote-down" href="#">Vote Down</a>
-                                  </div>
-                                  <span class="dwqa-pick-best-answer">Best Answer</span>
-                                  <div class="dwqa-answer-meta">
-                                      <span><a href="#"><img alt="authors" src="images/author2.png" />Kiki Ralp</a>  answered 1 year ago</span> <span class="dwqa-answer-actions"></span>
-                                  </div>
-                                  <div class="dwqa-answer-content">
-                                      <p>My suggestion to developers team is to great a tab that we can click on and highlight all the posts we want to get read of and click delete</p>
-                                  </div>
-
-                                  <div class="dwqa-comments">
+                                     <div class="dwqa-comments">
                                       <div class="dwqa-comments-list">
 
-                                          <div class="dwqa-comment">
+                                          <div class="dwqa-comment" *ngFor="let i of  sujet.commentaires" >
                                               <div class="dwqa-comment-meta">
-                                                  <a href="#"><img alt="author" src="images/author2.png" class="avatar avatar-16 photo" />Antawn Fiennes</a>
-                                                  replied 1 year ago
+                                                  <a href="#"><img alt="author" src="images/author2.png" class="avatar avatar-16 photo" />{{i.user.username}}</a>
+                                                  replied {{i.date| date }}
                                                   <div class="dwqa-comment-actions">
                                                   </div>
                                               </div>
@@ -134,35 +73,7 @@
                                       </div>
                                   </div>
                               </div>
-                              <div class="dwqa-answer-item" id="answer-64">
-                                  <div class="dwqa-answer-vote">
-                                      <span class="dwqa-vote-count">1</span>
-                                      <a class="dwqa-vote dwqa-vote-up" href="#">Vote Up</a>
-                                      <a class="dwqa-vote dwqa-vote-down" href="#">Vote Down</a>
-                                  </div>
-                                  <div class="dwqa-answer-meta">
-                                      <span><a href="#"><img alt="author" src="images/author2.png" />Shan Judd</a>  answered 1 year ago</span> <span class="dwqa-answer-actions"></span>
-                                  </div>
-                                  <div class="dwqa-answer-content">
-                                      <p>Well for what is worth, hope that this feature can be considered as soon as possible.</p>
-                                  </div>
 
-                                  <div class="dwqa-comments">
-                                      <div class="dwqa-comments-list">
-
-                                          <div class="dwqa-comment">
-                                              <div class="dwqa-comment-meta">
-                                                  <a href="#"><img alt="" src="images/author2.png" />Sanal Kumar</a>
-                                                  replied 9 months ago
-                                                  <div class="dwqa-comment-actions">
-                                                  </div>
-                                              </div>
-                                              <p>hai</p>
-                                          </div>
-                                          <!-- #comment-## -->
-                                      </div>
-                                  </div>
-                              </div>
                               <!-- End Answer item -->
                           </div>
                       </div>
@@ -170,40 +81,8 @@
               </div>
           </div>
           <!-- Start Blog Sidebar -->
-          <div class="col-md-3">
-              <div class="row">
-                  <div class="blog-sidebar">
-                      <div class="col-md-12 col-sm-6">
-                          <aside id="dwqa-categories-2" class="widget widget_categories dwqa_widget dwqa_widget_categories sidebar-list">
-                              <h2 class="widget-title">Topics Categories</h2>
-                              <ul>
-                                  <li><a href="#">Introduction</a></li>
-                                  <li><a href="#">Theme Options</a></li>
-                                  <li><a href="#">Typography</a></li>
-                                  <li><a href="#">Demo Install</a></li>
-                                  <li><a href="#">Billing</a></li>
-                                  <li><a href="#">Product Features</a></li>
-                                  <li><a href="#">Customer Support</a></li>
-                              </ul>
-                          </aside>
-                      </div>
-                      <div class="col-md-12 col-sm-6">
-                          <aside class="widget dwqa-widget dwqa-popular-question">
-                              <div class="sidebar-popular-post dwqa-popular-questions">
-                                  <h2 class="widget-title">Popular Questions</h2>
-                                  <ul>
-                                      <li><a href="#">How to pin a sticky question to the top of the questions page?</a> <span>asked by Kiki Ralp</span></li>
-                                      <li><a href="#">How can I delete more than one post at a time?</a> <span>asked by Antawn Fiennes</span></li>
-                                      <li><a href="#">How do I require a password if I forgot it?</a> <span>asked by Kiki Ralp</span></li>
-                                      <li><a href="#">Where I can see or edit ratings I’ve posted?</a> <span>asked by Antawn Fiennes</span></li>
-                                      <li><a href="#">Who can post ratings and reviews?</a> <span>asked by Antawn Fiennes</span></li>
-                                  </ul>
-                              </div>
-                          </aside>
-                      </div>
-                  </div>
-              </div>
-          </div>
+
+
           <!-- End Blog Sidebar -->
       </div>
   </div>

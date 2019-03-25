@@ -27,7 +27,7 @@ export class AuthentificationComponent implements OnInit {
       res => {
         localStorage.setItem('token', res.token);
         console.log(res.token);
-        this.router.navigate(['/categories']);
+        this.router.navigate(['/']);
       },
        loginError => this.error = loginError.message + '  verify  your username or password !  ')
     ;

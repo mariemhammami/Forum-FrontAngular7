@@ -20,7 +20,7 @@ const routes: Routes = [
 { path: 'registration', component: RegisterComponent},
 { path: 'navbar', component: NavbarComponent},
 { path: 'footer', component: FooterComponent},
-{ path: 'header', component: HeaderComponent},
+{ path: '', component: HeaderComponent},
 { path: 'allquestion', component: AllQuestionComponent},
 { path: 'askquestion', component: AckquestionComponent},
 { path: 'Answers/:id', component: AnswersComponent},
